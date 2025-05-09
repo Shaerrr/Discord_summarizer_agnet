@@ -60,6 +60,7 @@ Discord_chatbot_agent/
 0. 들어가기 앞서
 
 Python 3.11.11 버전
+
 requirements.txt는 window 운영환경에 맞춰져 있음
 
 1. 패키지 설치  
