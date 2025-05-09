@@ -429,8 +429,11 @@ async def Send_minutes():
                 await channel.send(result)
                 print(f"{channel.guild.name} 전송 완료")
                 saving=save_minutes(guild.id, result)
-                file_name = f"minutes/{guild.id}_{now.strftime('%Y-%m-%d')}.txt"
+                file_name = f"minutes/{guild.id}.txt"
+                file_name2= f"minutes/{guild.id}.md"
                 with open(file_name, "w", encoding="utf-8") as f:
+                    f.write(result)
+                with open(file_name2, "w", encoding="utf-8") as f:
                     f.write(result)
                 print(saving)
             except Exception as e:

@@ -154,14 +154,14 @@ def load_txt_minutes():
     file_list = glob("minutes/*.txt")
     documents = []
     for file_name in file_list:
-        guild_id, date = file_name.split("_")
+        guild_id= file_name
         loader = TextLoader(file_name, encoding="utf-8")
         file_documents = loader.load_and_split(text_splitter=RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50))
         
         # 각 문서에 개별적으로 메타데이터 추가
         for doc in file_documents:
             doc.metadata["guild_id"] = guild_id
-            doc.metadata["date"] = date
+            doc.metadata["date"] = datetime.now().strftime('%Y-%m-%d')
         
         # 처리된 문서를 전체 리스트에 추가
         documents.extend(file_documents)
