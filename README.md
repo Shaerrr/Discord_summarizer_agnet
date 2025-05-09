@@ -56,6 +56,12 @@ Discord_chatbot_agent/
 따라서, 로컬환경에서의 봇 구축이 아닌
 단순히 봇을 이용하기를 원하시면 상단의 링크를 통해 봇을 초대하시길 바랍니다.
 
+
+0. 들어가기 앞서
+
+Python 3.11.11 버전
+requirements.txt는 window 운영환경에 맞춰져 있음
+
 1. 패키지 설치  
 ```
 pip install -r requirements.txt
@@ -76,6 +82,8 @@ python gemini_summarization.py
 
 🛠️ 사용 기술 / 라이브러리
 ---
+Python 3.11.11
+
 LangChain
 
 Chroma
